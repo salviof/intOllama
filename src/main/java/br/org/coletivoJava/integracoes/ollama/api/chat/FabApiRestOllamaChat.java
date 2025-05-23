@@ -12,7 +12,6 @@ import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.servicoRegis
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.servicoRegistrado.InfoConfigRestClientIntegracao;
 
 /**
- *
  * @author sfurbino
  */
 @InfoConfigRestClientIntegracao(enderecosDocumentacao = "https://github.com/ollama/ollama/blob/main/docs/api.md",
@@ -20,7 +19,7 @@ import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.servicoRegis
         nomeIntegracao = FabConfigOllama.NOME_INTEGRACAO,
         configuracao = FabConfigOllama.class
 )
-public enum FabApiRestOlhamaChat implements ItfFabricaIntegracaoRest {
+public enum FabApiRestOllamaChat implements ItfFabricaIntegracaoRest {
 
     @InfoConsumoRestService(getPachServico = "/api/generate",
             tipoConexao = FabTipoConexaoRest.POST,
@@ -31,6 +30,12 @@ public enum FabApiRestOlhamaChat implements ItfFabricaIntegracaoRest {
             tipoConexao = FabTipoConexaoRest.POST,
             aceitarCertificadoDeHostNaoConfiavel = true,
             urlDocumentacao = "https://github.com/ollama/ollama/blob/main/docs/api.md")
-    CONVERSA_OBTER_RESPOSTA_IA;
+    CONVERSA_OBTER_RESPOSTA_IA,
 
+
+    @InfoConsumoRestService(getPachServico = "/api/chat",
+            tipoConexao = FabTipoConexaoRest.POST,
+            aceitarCertificadoDeHostNaoConfiavel = true,
+            urlDocumentacao = "https://github.com/ollama/ollama/blob/main/docs/api.md")
+    CONVERSA_SESSAO_ATUAL;
 }
