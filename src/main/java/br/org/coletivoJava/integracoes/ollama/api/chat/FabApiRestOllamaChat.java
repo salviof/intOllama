@@ -1,6 +1,7 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package br.org.coletivoJava.integracoes.ollama.api.chat;
 
@@ -11,29 +12,26 @@ import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.servicoRegis
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.servicoRegistrado.InfoConfigRestClientIntegracao;
 
 /**
- *
- * @author salvio
+ * @author sfurbino
  */
 @InfoConfigRestClientIntegracao(enderecosDocumentacao = "https://github.com/ollama/ollama/blob/main/docs/api.md",
         tipoAutenticacao = FabTipoAutenticacaoRest.USUARIO_SENHA_SIMPLES,
         nomeIntegracao = FabConfigOllama.NOME_INTEGRACAO,
         configuracao = FabConfigOllama.class
 )
-public enum FabApiRestOllhamaAgenteModel implements ItfFabricaIntegracaoRest {
-    @InfoConsumoRestService(getPachServico = "/api/create",
+public enum FabApiRestOllamaChat implements ItfFabricaIntegracaoRest {
+
+    @InfoConsumoRestService(getPachServico = "/api/generate",
+            tipoConexao = FabTipoConexaoRest.POST,
+            parametrosPost = {"model", "prompt", "stream"},
+            aceitarCertificadoDeHostNaoConfiavel = true,
+            urlDocumentacao = "https://github.com/ollama/ollama/blob/main/docs/api.md")
+    CONVERSA_OBTER_RESPOSTA_IA,
+
+
+    @InfoConsumoRestService(getPachServico = "/api/chat",
             tipoConexao = FabTipoConexaoRest.POST,
             aceitarCertificadoDeHostNaoConfiavel = true,
             urlDocumentacao = "https://github.com/ollama/ollama/blob/main/docs/api.md")
-    MODELO_CRIAR,
-    @InfoConsumoRestService(getPachServico = "/api/create",
-            tipoConexao = FabTipoConexaoRest.PUT,
-            aceitarCertificadoDeHostNaoConfiavel = true,
-            urlDocumentacao = "https://github.com/ollama/ollama/blob/main/docs/api.md")
-    MODELO_ATUALIZAR,
-    @InfoConsumoRestService(getPachServico = "/api/create",
-            tipoConexao = FabTipoConexaoRest.DELETE,
-            aceitarCertificadoDeHostNaoConfiavel = true,
-            urlDocumentacao = "https://github.com/ollama/ollama/blob/main/docs/api.md")
-    MODELO_REMOVER;
-
+    CONVERSA_SESSAO;
 }
