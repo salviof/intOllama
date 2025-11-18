@@ -4,7 +4,7 @@
  */
 package br.org.coletivoJava.integracoes.ollama.api.chat;
 
-import com.super_bits.modulosSB.SBCore.integracao.libRestClient.WS.ItfFabricaIntegracaoRest;
+import com.super_bits.modulosSB.SBCore.integracao.libRestClient.WS.ComoFabricaIntegracaoRest;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.WS.conexaoWebServiceClient.FabTipoConexaoRest;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.WS.conexaoWebServiceClient.InfoConsumoRestService;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.servicoRegistrado.FabTipoAutenticacaoRest;
@@ -35,7 +35,7 @@ import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.servicoRegis
         configuracao = FabConfigOllama.class
 )
 
-public enum FabApiRestOllamaAgenteModel implements ItfFabricaIntegracaoRest {
+public enum FabApiRestOllamaAgenteModel implements ComoFabricaIntegracaoRest {
 
     /**
      * Cria um novo modelo no sistema Ollama.

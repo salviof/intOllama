@@ -4,7 +4,7 @@ import br.org.coletivoJava.integracoes.restIntollama.api.InfoIntegracaoRestIntol
 import br.org.coletivoJava.integracoes.ollama.api.chat.FabApiRestOllamaAgenteModel;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.implementacao.AcaoApiIntegracaoAbstrato;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.FabTipoAgenteClienteApi;
-import com.super_bits.modulosSB.SBCore.modulos.objetos.registro.Interfaces.basico.ItfUsuario;
+import com.super_bits.modulosSB.SBCore.modulos.objetos.registro.Interfaces.basico.ComoUsuario;
 import jakarta.json.Json;
 import jakarta.json.JsonObject;
 import jakarta.json.JsonObjectBuilder;
@@ -16,7 +16,7 @@ public class IntegracaoRestIntollamaModeloCriar extends AcaoApiIntegracaoAbstrat
 
     public IntegracaoRestIntollamaModeloCriar(
             final FabTipoAgenteClienteApi pTipoAgente,
-            final ItfUsuario pUsuario,
+            final ComoUsuario pUsuario,
             final java.lang.Object... pParametro) {
         super(FabApiRestOllamaAgenteModel.MODELO_CRIAR, pTipoAgente, pUsuario, pParametro);
     }

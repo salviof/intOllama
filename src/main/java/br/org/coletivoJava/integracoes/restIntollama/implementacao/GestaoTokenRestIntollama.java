@@ -8,7 +8,7 @@ import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.token.TokenD
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.implementacao.gestaoToken.GestaoTokenChaveUnica;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.token.ItfTokenDeAcessoExterno;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.FabTipoAgenteClienteApi;
-import com.super_bits.modulosSB.SBCore.modulos.objetos.registro.Interfaces.basico.ItfUsuario;
+import com.super_bits.modulosSB.SBCore.modulos.objetos.registro.Interfaces.basico.ComoUsuario;
 
 import java.util.Date;
 
@@ -25,7 +25,7 @@ public class GestaoTokenRestIntollama extends GestaoTokenChaveUnica {
 		return false;
 	}
 	public GestaoTokenRestIntollama(final FabTipoAgenteClienteApi pTipoAgente,
-									final ItfUsuario pUsuario) {
+									final ComoUsuario pUsuario) {
 		super(FabApiRestOllamaChat.class, pTipoAgente, pUsuario);
 	}
 

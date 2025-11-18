@@ -5,14 +5,14 @@ import br.org.coletivoJava.integracoes.ollama.api.chat.FabApiRestOllamaAgenteMod
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.WS.conexaoWebServiceClient.RespostaWebServiceSimples;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.implementacao.AcaoApiIntegracaoAbstrato;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.FabTipoAgenteClienteApi;
-import com.super_bits.modulosSB.SBCore.modulos.objetos.registro.Interfaces.basico.ItfUsuario;
+import com.super_bits.modulosSB.SBCore.modulos.objetos.registro.Interfaces.basico.ComoUsuario;
 import jakarta.json.Json;
 import jakarta.json.JsonObject;
 
 @InfoIntegracaoRestIntollamaModel(tipo = FabApiRestOllamaAgenteModel.MODELO_REMOVER)
 public class IntegracaoRestIntollamaModeloRemover extends AcaoApiIntegracaoAbstrato {
 
-    public IntegracaoRestIntollamaModeloRemover(final FabTipoAgenteClienteApi pTipoAgente, final ItfUsuario pUsuario, final java.lang.Object... pParametro) {
+    public IntegracaoRestIntollamaModeloRemover(final FabTipoAgenteClienteApi pTipoAgente, final ComoUsuario pUsuario, final java.lang.Object... pParametro) {
         super(FabApiRestOllamaAgenteModel.MODELO_REMOVER, pTipoAgente,
                 pUsuario, pParametro);
 

@@ -6,7 +6,7 @@ import br.org.coletivoJava.integracoes.ollama.api.chat.FabApiRestOllamaChat;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.WS.conexaoWebServiceClient.RespostaWebServiceSimples;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.implementacao.AcaoApiIntegracaoAbstrato;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.FabTipoAgenteClienteApi;
-import com.super_bits.modulosSB.SBCore.modulos.objetos.registro.Interfaces.basico.ItfUsuario;
+import com.super_bits.modulosSB.SBCore.modulos.objetos.registro.Interfaces.basico.ComoUsuario;
 import jakarta.json.*;
 
 @InfoIntegracaoRestIntollamaChat(tipo = FabApiRestOllamaChat.CONVERSA_SESSAO)
@@ -16,7 +16,7 @@ public class IntegracaoRestIntollamaConversaSessao
 
     public IntegracaoRestIntollamaConversaSessao(
             final FabTipoAgenteClienteApi pTipoAgente,
-            final ItfUsuario pUsuario, final java.lang.Object... pParametro) {
+            final ComoUsuario pUsuario, final java.lang.Object... pParametro) {
         super(FabApiRestOllamaChat.CONVERSA_SESSAO, pTipoAgente, pUsuario,
                 pParametro);
     }

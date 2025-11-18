@@ -1,6 +1,6 @@
 package br.org.coletivoJava.integracoes.ollama.api.chat;
 
-import com.super_bits.modulosSB.SBCore.integracao.libRestClient.WS.ItfFabricaIntegracaoRest;
+import com.super_bits.modulosSB.SBCore.integracao.libRestClient.WS.ComoFabricaIntegracaoRest;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.WS.conexaoWebServiceClient.FabTipoConexaoRest;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.WS.conexaoWebServiceClient.InfoConsumoRestService;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.servicoRegistrado.FabTipoAutenticacaoRest;
@@ -14,7 +14,7 @@ import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.servicoRegis
         nomeIntegracao = FabConfigOllama.NOME_INTEGRACAO,
         configuracao = FabConfigOllama.class
 )
-public enum FabApiRestOllamaChat implements ItfFabricaIntegracaoRest {
+public enum FabApiRestOllamaChat implements ComoFabricaIntegracaoRest {
 
     @InfoConsumoRestService(getPachServico = "/api/generate",
             tipoConexao = FabTipoConexaoRest.POST,
