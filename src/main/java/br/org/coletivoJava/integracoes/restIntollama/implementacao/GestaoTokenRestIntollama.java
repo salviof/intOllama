@@ -3,7 +3,7 @@ package br.org.coletivoJava.integracoes.restIntollama.implementacao;
 import br.org.coletivoJava.integracoes.restIntollama.api.InfoIntegracaoRestIntollamaChat;
 import br.org.coletivoJava.integracoes.ollama.api.chat.FabApiRestOllamaChat;
 import br.org.coletivoJava.integracoes.ollama.api.chat.FabConfigOllama;
-import com.super_bits.modulosSB.SBCore.UtilGeral.UtilSBCoreDataHora;
+import com.super_bits.modulosSB.SBCore.UtilGeral.UtilCRCDataHora;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.token.TokenDeAcessoExternoDinamico;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.implementacao.gestaoToken.GestaoTokenChaveUnica;
 import com.super_bits.modulosSB.SBCore.integracao.libRestClient.api.token.ItfTokenDeAcessoExterno;
@@ -31,7 +31,7 @@ public class GestaoTokenRestIntollama extends GestaoTokenChaveUnica {
 
 	@Override
 	public ItfTokenDeAcessoExterno gerarNovoToken() {
-		setToken(new TokenDeAcessoExternoDinamico("semToken", UtilSBCoreDataHora.incrementaDias(new Date(), 360)));
+		setToken(new TokenDeAcessoExternoDinamico("semToken", UtilCRCDataHora.incrementaDias(new Date(), 360)));
 		return getTokenCompleto();
 	}
 }
